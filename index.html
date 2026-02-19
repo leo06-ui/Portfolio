@@ -3,17 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Year 9 Portfolio Project</title>
+  <title>Year 9 Intermediate Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Year 9 Intermediate Website</h1>
+    <div class="container header-row">
+      <div class="logo-badge">
+        <div class="logo-circle">Y9</div>
+        <h1 class="site-title">Year 9 Intermediate Website</h1>
+      </div>
+
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#topics" class="nav-link">Topics</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#resources" class="nav-link">Resources</a>
+        <a href="#faq" class="nav-link">FAQ</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </div>
@@ -21,18 +30,28 @@
 
   <main>
     <section id="home" class="hero container">
-      <h2>Welcome</h2>
-      <p>This simple, navy blue themed website is built for a Year 9 intermediate level. It demonstrates semantic HTML, responsive layout, and accessible navigation.</p>
-      <p><strong>Skills shown</strong>: headings, lists, images, links, CSS styling, hover effects.</p>
+      <div class="blob a"></div>
+      <div class="blob b"></div>
+
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h2>Welcome</h2>
+          <p>This navy blue themed site is a Year 9 intermediate project. Use the navigation to jump between sections and try editing the content to practise HTML and CSS.</p>
+          <a class="cta" href="#projects">See Projects</a>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <!-- Optional: add an SVG or image here -->
+        </div>
+      </div>
     </section>
 
     <section id="about" class="container card">
       <h2>About This Project</h2>
-      <p>This page is a short project example suitable for Year 9 students learning web design. It uses a navy blue colour palette and clear structure so content is easy to read.</p>
-      <ul>
-        <li>Semantic HTML structure</li>
-        <li>Responsive layout for phones and desktops</li>
-        <li>Simple, readable typography</li>
+      <p>This example shows how to structure a simple website with multiple sections. Each section uses semantic HTML and clear headings so it is easy to read and edit.</p>
+      <ul class="fun-list">
+        <li><span class="badge">1</span> Learn HTML structure</li>
+        <li><span class="badge">2</span> Practice CSS styling</li>
+        <li><span class="badge">3</span> Build small interactive features</li>
       </ul>
     </section>
 
@@ -41,24 +60,77 @@
 
       <article class="topic">
         <h3>HTML Basics</h3>
-        <p>HTML is the structure of a webpage. Use headings, paragraphs, lists and links to organise content.</p>
+        <p>Headings, paragraphs, lists and links form the structure of a page.</p>
       </article>
 
       <article class="topic">
         <h3>CSS Styling</h3>
-        <p>CSS controls how the page looks. This site uses variables for the navy theme and simple layout rules.</p>
+        <p>Use colours, spacing and fonts to make content readable and fun.</p>
       </article>
 
       <article class="topic">
         <h3>Accessibility</h3>
-        <p>Good websites are accessible: use clear headings, descriptive links and sufficient colour contrast.</p>
+        <p>Good contrast and clear headings help everyone use your site.</p>
       </article>
+    </section>
+
+    <section id="projects" class="container card">
+      <h2>Projects</h2>
+      <p>Short project ideas you can try at home or in class.</p>
+      <ul>
+        <li><strong>Mini Portfolio</strong> — create a page about your hobbies.</li>
+        <li><strong>Interactive Quiz</strong> — build a short JavaScript quiz.</li>
+        <li><strong>Photo Collage</strong> — make a gallery of your favourite photos.</li>
+      </ul>
+    </section>
+
+    <section id="gallery" class="container card">
+      <h2>Gallery</h2>
+      <p>Click any image to view it larger.</p>
+
+      <div class="grid" id="thumbs">
+        <div class="topic">
+          <img src="https://via.placeholder.com/300x180/05396b/ffd166?text=Image+1" alt="Sample image 1" class="thumb" />
+        </div>
+        <div class="topic">
+          <img src="https://via.placeholder.com/300x180/042a4a/4dd0e1?text=Image+2" alt="Sample image 2" class="thumb" />
+        </div>
+        <div class="topic">
+          <img src="https://via.placeholder.com/300x180/021428/ffd166?text=Image+3" alt="Sample image 3" class="thumb" />
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div id="lightbox" class="card" style="display:none;position:fixed;inset:0;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);z-index:60;">
+        <button id="lb-close" style="position:absolute;top:18px;right:18px;padding:8px 12px;border-radius:8px;background:#ffd166;border:none;font-weight:700;cursor:pointer;">Close</button>
+        <img id="lb-img" src="" alt="" style="max-width:90%;max-height:80%;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,0.6);" />
+      </div>
+    </section>
+
+    <section id="resources" class="container card">
+      <h2>Resources</h2>
+      <p>Helpful links and ideas for learning more.</p>
+      <ul>
+        <li>Try editing this HTML file and reloading the page to see changes.</li>
+        <li>Experiment with colours in <code>style.css</code> to change the theme.</li>
+      </ul>
+    </section>
+
+    <section id="faq" class="container card">
+      <h2>FAQ</h2>
+      <dl>
+        <dt>How do I change the site title</dt>
+        <dd>Edit the text inside the <code>&lt;h1 class="site-title"&gt;</code> element in <code>index.html</code>.</dd>
+
+        <dt>How do I add a new section</dt>
+        <dd>Copy one of the existing &lt;section&gt; blocks, give it a unique <code>id</code>, and add a nav link to the header.</dd>
+      </dl>
     </section>
 
     <section id="contact" class="container card">
       <h2>Contact</h2>
-      <p>If this were a real site you could add a contact form. For now, try editing the files to practise.</p>
-      <p><strong>Try this</strong>: change the site title in the header and update the text in the About section.</p>
+      <p>This is a demo site. To practise, add a simple contact form here or a link to your email.</p>
+      <p><strong>Try this</strong>: replace this paragraph with your own contact details or a short form.</p>
     </section>
   </main>
 
@@ -69,8 +141,45 @@
   </footer>
 
   <script>
-    // Small script to set the current year
+    // Set current year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('.main-nav a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Simple gallery lightbox
+    const thumbs = document.querySelectorAll('.thumb');
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbClose = document.getElementById('lb-close');
+
+    thumbs.forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    lbClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lbImg.src = '';
+    });
+
+    // Close lightbox on background click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        lbImg.src = '';
+      }
+    });
   </script>
 </body>
 </html>
