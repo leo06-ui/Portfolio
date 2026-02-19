@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Year 9 Portfolio Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Year 9 Intermediate Website</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#topics" class="nav-link">Topics</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero container">
+      <h2>Welcome</h2>
+      <p>This simple, navy blue themed website is built for a Year 9 intermediate level. It demonstrates semantic HTML, responsive layout, and accessible navigation.</p>
+      <p><strong>Skills shown</strong>: headings, lists, images, links, CSS styling, hover effects.</p>
+    </section>
+
+    <section id="about" class="container card">
+      <h2>About This Project</h2>
+      <p>This page is a short project example suitable for Year 9 students learning web design. It uses a navy blue colour palette and clear structure so content is easy to read.</p>
+      <ul>
+        <li>Semantic HTML structure</li>
+        <li>Responsive layout for phones and desktops</li>
+        <li>Simple, readable typography</li>
+      </ul>
+    </section>
+
+    <section id="topics" class="container grid">
+      <h2>Topics</h2>
+
+      <article class="topic">
+        <h3>HTML Basics</h3>
+        <p>HTML is the structure of a webpage. Use headings, paragraphs, lists and links to organise content.</p>
+      </article>
+
+      <article class="topic">
+        <h3>CSS Styling</h3>
+        <p>CSS controls how the page looks. This site uses variables for the navy theme and simple layout rules.</p>
+      </article>
+
+      <article class="topic">
+        <h3>Accessibility</h3>
+        <p>Good websites are accessible: use clear headings, descriptive links and sufficient colour contrast.</p>
+      </article>
+    </section>
+
+    <section id="contact" class="container card">
+      <h2>Contact</h2>
+      <p>If this were a real site you could add a contact form. For now, try editing the files to practise.</p>
+      <p><strong>Try this</strong>: change the site title in the header and update the text in the About section.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Year 9 Intermediate Project</p>
+    </div>
+  </footer>
+
+  <script>
+    // Small script to set the current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
